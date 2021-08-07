@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <nav >
+            <div class="nav_icon">
+                <img src="./Images/logo.png" class="logo">
+            </div>
+            <div class="nav_menu">
+                <ul class="nav_list">
+                    <li>
+                        <a href="">Latest</a>
+                    </li>
+                    <li>
+                        <a href="">Moderm</a>
+                    </li>
+                    <li>
+                        <a href="">Contemporary</a>
+                    </li>
+                    <li>
+                        <a href="">Affordable</a>
+                    </li>
+                    <li>
+                        <a href="https://youtu.be/RlC1bawrcbk" target="blank"  >Resource</a>
+                    </li>
+                </ul>
+            </div>
+            <button type="button" onclick="onlight()" id="btn"> <span></span></button>
+        </nav>
+        <div class="main_pic">
+            <img src="./Images/lamp.png" class="lamp">
+            <img src="./Images/light.png" class="light" id="light">
+        </div>
+        <div class="title">
+            <h1>Latest <br> in Lighting</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adiat <br> adipisci accusamus!</p>
+            <button><a href="">Check All Collections</a></button>
+        </div>
+    
+    </header>
+    <footer>
+        <p>This website was made as part of practice by Saumyajit Pal<br> For code you can click on Resource</p>
+    </footer>
+
+    <script>
+        var btn =document.getElementById("btn");
+        var light =document.getElementById("light");
+
+        function onlight(){
+            btn.classList.toggle("active");
+            light.classList.toggle("on");
+        }
+    </script>
+</body>
+</html>
