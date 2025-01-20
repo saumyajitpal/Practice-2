@@ -1,126 +1,131 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-header{
+header {
     width: 100%;
     height: 100vh;
     background: #1d2026;
-    margin: 20px auto;
     position: relative;
 }
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 8%;
-    width: 100%;
-    height: 60px;
-    
+    padding: 20px 5%;
 }
-.nav_icon img{
-    width: 200px;   
+.nav_icon img {
+    width: 120px;
 }
-
-.nav_menu ul li{
-    flex-basis: 60%;
-    display: inline-block ;
+.nav_menu ul {
+    display: flex;
     list-style: none;
-    margin: 20px 10px;
 }
-.nav_menu ul li a{
+.nav_menu ul li {
+    margin: 0 10px;
+}
+.nav_menu ul li a {
     text-decoration: none;
     color: white;
-    font-size: 21px;
-
+    font-size: 16px;
+    transition: color 0.3s;
 }
-.nav_menu ul li a::after{
-    content: '';
-    display: block;
-    width: 0%;
-    height: 2px; 
-    background: white;
-    transition: 0.5s;
+.nav_menu ul li a:hover {
+    color: #00ffcc;
 }
-.nav_menu ul li:hover ::after{
-    width: 100%;
-}
-nav button{
+button {
     background: #efefef;
-    height: 29px;
+    height: 30px;
     width: 60px;
-    border-radius: 50px;
+    border-radius: 30px;
     border: none;
     outline: none;
-    transition: 1s ;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px;
+    transition: background 0.5s;
 }
-nav button span{
+button.active {
+    justify-content: flex-end;
+    background: #00ffcc;
+}
+button span {
     display: block;
-    width: 27px;
-    height: 27px;
+    width: 20px;
+    height: 20px;
     background: #999;
     border-radius: 50%;
-    margin-left: 2px;
-    transition: 1s ;
+    transition: background 0.5s;
 }
-.main_pic{  
-    position: absolute;
-    top: 0;
-    left: 22%;
-    width: 180px;
-}
-.lamp{
-    width: 100%;
-}
-.light{
-    position: absolute;
-    top: 97%;
-    left: 45%;
-    transform: translateX(-50%);
-    width: 90vh;
-    opacity: 0;
-    transition: 1s;
-}
-.title{
-    margin-top: 7%;
-    margin-left: 50%;
-}
-.title h1{
-    font-size: 80px;
-    color: white;
-}
-.title p{
-    color: white;
-    font-size: 18px;
-    line-height: 30px;
-}
-.title button{
-    margin-top: 25px;
-    padding: 12px 29px;
-    border-radius: 20px;
-    outline: none;
-    border: none;
-    background: #00986f;
-    
-}
-.title button a{
-    text-decoration: none;
-    color: white;
-}
-footer{
-    margin: 20px;
-    text-align: center;
-    font-size: 15px;
-
-}
-.active{
-    background: green;
-}
-.active span{
+button.active span {
     background: white;
-    margin-left: 50%;
 }
-.on{
+.main_pic {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.lamp {
+    max-width: 300px;
+}
+.light {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 300px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.light.on {
     opacity: 1;
+}
+.title {
+    margin-top: 5%;
+    text-align: center;
+    color: white;
+}
+.title h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+}
+.title p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+.title button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #00986f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.title button:hover {
+    background: #007f59;
+}
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-size: 0.8rem;
+}
+.message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    color: red;
+    display: none;
+    font-weight: bold;
+}
+.message.active {
+    display: block;
 }
